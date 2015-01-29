@@ -397,6 +397,7 @@ DEPENDENCIES
   jettywrapper
   jquery-rails
   mysql
+  om
   rails (= 4.2.0)
   rspec-rails
   rubygems-update (~> 2.1.0.rc.1)

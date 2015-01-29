@@ -20,6 +20,7 @@ gem 'yaml_db'
 
 gem 'mysql'
 
+gem 'om'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
