@@ -6,6 +6,8 @@ class Book < ActiveFedora::Base
   #
   has_metadata "descMetadata", type: BookMetadata
   
+
+
   # Uncomment the following lines to add an #attachment method that is a
   #   file_datastream:
   #
@@ -19,5 +21,9 @@ class Book < ActiveFedora::Base
   #   solr_document["my_attribute_s"] = my_attribute
   #   return solr_document
   # end
+
+has_attributes :title, datastream: 'descMetadata', multiple: false
+  has_attributes :author, datastream: 'descMetadata', multiple: false
+
 
 end
