@@ -46,4 +46,4 @@ end
   #   return solr_document
   # end
 
-end
+
