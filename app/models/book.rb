@@ -4,7 +4,7 @@ class Book < ActiveFedora::Base
   
   # Creating a #descMetadata method that returns the datastream. 
   #
-  has_metadata "descMetadata", type: BookMetadata
+ # has_metadata "descMetadata", type: BookMetadata
   
 
 
@@ -22,8 +22,11 @@ class Book < ActiveFedora::Base
   #   return solr_document
   # end
 
-has_attributes :title, datastream: 'descMetadata', multiple: false
-  has_attributes :author, datastream: 'descMetadata', multiple: false
+ # has_attributes :title, datastream: 'descMetadata', multiple: false
+ # has_attributes :author, datastream: 'descMetadata', multiple: false
+
+  property :title, predicate: ::RDF::DC.title, multiple: false
+  property :author, predicate: ::RDF::DC.creator, multiple: false
 
 
 end
