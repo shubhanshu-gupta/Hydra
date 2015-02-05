@@ -25,8 +25,15 @@ class Book < ActiveFedora::Base
  # has_attributes :title, datastream: 'descMetadata', multiple: false
  # has_attributes :author, datastream: 'descMetadata', multiple: false
 
-  property :title, predicate: ::RDF::DC.title, multiple: false
-  property :author, predicate: ::RDF::DC.creator, multiple: false
+############the Book model has now indexed the author and title fields################
+
+  property :title, predicate: ::RDF::DC.title, multiple: false do |index|
+    index.as :stored_searchable
+  end
+
+  property :author, predicate: ::RDF::DC.creator, multiple: false do |index|
+    index.as :stored_searchable
+  end
 
 
 end
