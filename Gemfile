@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'hydra'
+gem 'hydra', '9.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '~> 4.1.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -14,11 +14,15 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'activesupport', '~> 4.1.0'
+
 gem 'rubygems-update', '~> 2.1.0.rc.1'
 
 gem 'yaml_db'
 
 gem 'mysql'
+
+gem 'solrizer'
 
 gem 'om'
 
@@ -59,4 +63,9 @@ gem 'devise-guests', '~> 0.3'
 group :development, :test do
   gem 'rspec-rails'
   gem 'jettywrapper'
+end
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "jettywrapper"
 end
