@@ -26,6 +26,8 @@ class Page < ActiveFedora::Base
   end
 
 belongs_to :book, predicate: ActiveFedora::RDF::Fcrepo::RelsExt.isPartOf
+
+contains "pageContent"
   # Uncomment the following lines to add an #attachment method that is a file
   #
   # contains "attachment"
