@@ -1,6 +1,8 @@
 # Generated via
 #  `rails generate active_fedora::model Book`
 class Book < ActiveFedora::Base
+
+  has_many :pages
   
   # Creating a #descMetadata method that returns the datastream. 
   #
