@@ -17,6 +17,10 @@ class MusicTrack < ActiveFedora::Base
     index.as :stored_searchable
   end
   
+  #property :type, predicate: ::RDF::DC.type do |index|
+   # index.as :stored_searchable
+  #end
+
   # Uncomment the following lines to add an #attachment method that is a file
   #
   # contains "attachment"
