@@ -16,7 +16,7 @@ class MusicTrack < ActiveFedora::Base
   property :description, predicate: ::RDF::DC.description do |index|
     index.as :stored_searchable
   end
-  property :Genre, predicate: ::RDF::URI('http://purl.org/ontology/mo/Genre') do |index|
+  property :genre, predicate: ::RDF::URI('http://purl.org/ontology/mo/Genre') do |index|
     index.as :stored_searchable, :facetable
   end
   
