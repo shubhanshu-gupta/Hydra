@@ -13,7 +13,7 @@ class CatalogController < ApplicationController
 
   configure_blacklight do |config|
     config.default_solr_params = {
-       :qf => 'title_tesim author_tesim creator_tesim contributor_tesim description_tesim genre_tesim',
+       :qf => 'title_tesim creator_tesim contributor_tesim description_tesim genre_tesim',
       :qt => 'search',
       :rows => 10
     }
@@ -138,6 +138,14 @@ class CatalogController < ApplicationController
       field.solr_local_parameters = {
         :qf => '$subject_qf',
         :pf => '$subject_pf'
+      }
+    end
+
+config.add_search_field('genre') do |field|
+
+      field.solr_local_parameters = {
+        :qf => '$genre_qf',
+        :pf => '$genre_pf'
       }
     end
 
